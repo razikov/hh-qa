@@ -17,3 +17,10 @@ cp ./.env.example ./.env && nano ./.env
 ```Bash
 npm test
 ```
+
+## Через докер
+```
+docker build -t razikov/hh-qa .
+docker run --rm razikov/hh-qa npm install
+docker run --rm razikov/hh-qa ./node_modules/.bin/mocha
+```
